@@ -1,0 +1,34 @@
+<mat-card>
+    <mat-card-title>Search Bus</mat-card-title>
+    <mat-card-content>
+        <form class="form">
+            <mat-form-field class="full-width">
+                <input type="text" [formControl]="pickup" placeholder="From" aria-label="Number" matInput
+                    [matAutocomplete]="dept">
+                <mat-autocomplete #dept="matAutocomplete">
+                    <mat-option *ngFor="let loc of fromLoc| async" [value]="loc">
+                        {{loc}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <input type="text" [formControl]="drop" placeholder="To" aria-label="Number" matInput
+                    [matAutocomplete]="dest">
+                <mat-autocomplete #dest="matAutocomplete">
+                    <mat-option *ngFor="let loc of toLoc | async" [value]="loc">
+                        {{loc}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput [matDatepicker]="date" [(ngModel)]="startdate" name="startdate"
+                    placeholder="Choose a date">
+                <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+                <mat-datepicker #date></mat-datepicker>
+            </mat-form-field>
+            <button mat-button>Search Bus</button>
+        </form>
+    </mat-card-content>
+</mat-card>
