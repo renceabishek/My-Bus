@@ -1,0 +1,59 @@
+{
+    "data": [
+        {
+            "busname": "Green Line",
+            "boarding": "10:00 PM",
+            "Droping": "05:00 AM",
+            "fromPlace": "chennai",
+            "toPlace": "salem",
+            "travelDate": "2019-07-06",
+            "coachType": "AC",
+            "SeatAvailable": "32",
+            "Fare": "500"
+        },
+        {
+            "busname": "Green Line",
+            "boarding": "10:00 PM",
+            "Droping": "05:00 AM",
+            "fromPlace": "chennai",
+            "toPlace": "salem",
+            "travelDate": "2019-07-06",
+            "coachType": "AC",
+            "SeatAvailable": "32",
+            "Fare": "500"
+        },
+        {
+            "busname": "Green Line",
+            "boarding": "10:00 PM",
+            "Droping": "05:00 AM",
+            "fromPlace": "villupuram",
+            "toPlace": "salem",
+            "travelDate": "2019-07-06",
+            "coachType": "AC",
+            "SeatAvailable": "32",
+            "Fare": "500"
+        },
+        {
+            "busname": "Green Line",
+            "boarding": "10:00 PM",
+            "Droping": "05:00 AM",
+            "fromPlace": "chennai",
+            "toPlace": "villupuram",
+            "travelDate": "2019-07-06",
+            "coachType": "AC",
+            "SeatAvailable": "32",
+            "Fare": "100"
+        },
+        {
+            "busname": "Green Line",
+            "boarding": "10:00 PM",
+            "Droping": "05:00 AM",
+            "fromPlace": "villupuram",
+            "toPlace": "chennai",
+            "travelDate": "2019-07-06",
+            "coachType": "AC",
+            "SeatAvailable": "32",
+            "Fare": "540"
+        }
+    ]
+}

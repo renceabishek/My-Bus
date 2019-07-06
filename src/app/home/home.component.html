@@ -1,7 +1,7 @@
 <mat-card>
     <mat-card-title>Search Bus</mat-card-title>
     <mat-card-content>
-        <form class="form">
+        <form class="form" (ngSubmit)="SearchBus()" >
             <mat-form-field class="full-width">
                 <input type="text" [formControl]="pickup" placeholder="From" aria-label="Number" matInput
                     [matAutocomplete]="dept">
