@@ -1,22 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule,Routes} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatAutocompleteModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule } from '@angular/material';
+import { MatToolbarModule, MatAutocompleteModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MAT_DATE_LOCALE, MatSnackBarModule } from '@angular/material';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 
-const userRoute:Routes=[
-  {path:'search',component:SearchComponent}
-  
-  ]
+const userRoute: Routes = [
+  { path: 'search', component: SearchComponent }
+
+]
 
 @NgModule({
   declarations: [
@@ -42,12 +42,15 @@ const userRoute:Routes=[
     MatNativeDateModule,
     MatInputModule,
     MatCardModule,
+    MatSnackBarModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
