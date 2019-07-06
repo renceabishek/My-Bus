@@ -15,7 +15,11 @@ export class HomeService {
     return this.http.get('./assets/mockdata/location.json');
   }
 
-  getSearchLocation(): Observable<any> {
+  getSearchLocation(from) {
+    this.routeId.next(from);
+  }
+
+  fetchSearchLocation(from): Observable<any> {
     return this.http.get('./assets/mockdata/search.json');
   }
 }

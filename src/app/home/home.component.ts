@@ -6,7 +6,7 @@ import { startWith, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
@@ -46,8 +46,7 @@ export class HomeComponent implements OnInit {
   SearchBus() {
     console.log(this.pickup.value)
     console.log(this.drop.value)
-    //this.home.getSearchLocation().subscribe(data=>);
-    //localStorage.setItem("route", JSON.stringify(route))
+    this.home.getSearchLocation(this.pickup.value);
     this.router.navigate(['search']);
   }
 }

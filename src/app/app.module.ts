@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule,Routes} from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -13,10 +12,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 
-const userRoute:Routes=[
-  {path:'search',component:SearchComponent}
-  
-  ]
 
 @NgModule({
   declarations: [
@@ -27,7 +22,6 @@ const userRoute:Routes=[
     SearchComponent
   ],
   imports: [
-    RouterModule.forRoot(userRoute),
     BrowserModule,
     AppRoutingModule,
     LayoutModule,

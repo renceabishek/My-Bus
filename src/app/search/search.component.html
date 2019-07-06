@@ -1,1 +1,39 @@
-<p>search works!</p>
+<div class="container mt-4 ">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        
+        <div class="row search-result mb-5 pb-5">
+  
+          <table class="table">
+  
+            <thead>
+              <tr>
+                  <th>Bus Name</th>
+                  <th>Boarding Time</th>
+                  <th>Droping Time</th>
+                  <th>Coach Type</th>
+                  <th>Seat Available</th>
+                  <th>Fare</th>
+                  <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let b of buses">
+                <td> <h6>{{b.busname}}</h6></td>
+               
+                <td>{{b.boarding}}</td>
+                <td>{{b.Droping}}</td>
+                <td>{{b.coachType}}</td>
+                <td>{{b.SeatAvailable}}</td>
+                <td>{{b.Fare}}</td>
+                
+                <td><button  (click)="openModal(template)" class="btn btn-danger btn-sm">View Seats</button></td>
+              </tr>
+    
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+  </div>
