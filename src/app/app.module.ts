@@ -43,7 +43,7 @@ import { SearchComponent } from './search/search.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatMenuModule
+    MatMenuModule    
   ],
   providers: [
     { provide: MAT_DATE_LOCALE, useValue: 'en-GB' },
