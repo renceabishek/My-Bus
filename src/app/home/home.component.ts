@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   pickup = new FormControl();
   drop = new FormControl();
   startdate: any;
+  returndate: any;
 
   locations: string[] = [];
   fromLoc: Observable<string[]>;

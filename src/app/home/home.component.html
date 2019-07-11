@@ -1,9 +1,9 @@
-<div class="overlap"></div>
-<br><br><br><br>
-<div class="container" >
+<!-- <div class="overlap"></div> -->
+<br><br>
+<div class="image_Backgroup" >
         <!-- <img src="../../assets/img/slider.jpg" alt="Nature" style="width:100%;"> -->
-  <div class="row justify-content-center pb-5 pt-3"  style="background: url(../../assets/img/slider.jpg); width: 100%;" > 
-        <div class="col-md-5 block mt-3" >
+  <div class="justify-content-center pb-5 pt-2" > 
+        <div class="col-md-10 block mt-3 align_home" >
 <mat-card>
     <mat-card-content>
             
@@ -30,18 +30,26 @@
 
             <mat-form-field class="full-width">
                 <input matInput [matDatepicker]="date" [(ngModel)]="startdate" name="startdate"
-                    placeholder="Choose a date">
+                    placeholder="Onward date">
                 <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
                 <mat-datepicker #date></mat-datepicker>
             </mat-form-field>
-            <button style="margin-left:141px" mat-raised-button color="primary">Search Bus</button>
+
+            <mat-form-field class="full-width">
+                <input matInput [matDatepicker]="date1" [(ngModel)]="returndate" name="returndate"
+                    placeholder="Return date">
+                <mat-datepicker-toggle matSuffix [for]="date1"></mat-datepicker-toggle>
+                <mat-datepicker #date1></mat-datepicker>
+            </mat-form-field>
+
+            <button class="full-width" style="margin-left:14px" mat-raised-button color="primary">Search Bus</button>
         </form>
         
     </mat-card-content>
 </mat-card>
 </div>
-<div class="col-md-5 slider mt-3 ">
+<!-- <div class="col-md-5 slider mt-3 ">
     <img src="../assets/img/redBus-coupons-offers-1586.PNG" class="img-fluid">
-  </div>
+  </div> -->
   </div>
   </div>
