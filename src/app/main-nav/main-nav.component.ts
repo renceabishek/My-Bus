@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {DomSanitizer} from '@angular/platform-browser';
-import {MatIconRegistry} from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Login } from '../login/login';
 
 @Component({
   selector: 'app-main-nav',
@@ -18,14 +19,20 @@ export class MainNavComponent {
       map(result => result.matches)
     );
 
-  constructor(private breakpointObserver: BreakpointObserver, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+  constructor(public dialog: MatDialog, private breakpointObserver: BreakpointObserver, iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
     iconRegistry.addSvgIcon(
       'thumbs-up',
       sanitizer.bypassSecurityTrustResourceUrl('../../assets/img/icon/home.svg'));
-      iconRegistry.addSvgIcon(
-        'people',
-        sanitizer.bypassSecurityTrustResourceUrl('../../assets/img/icon/people.svg'));
-}
+    iconRegistry.addSvgIcon(
+      'people',
+      sanitizer.bypassSecurityTrustResourceUrl('../../assets/img/icon/people.svg'));
   }
+  onLogin() {
+    const dialogRef = this.dialog.open(Login, {
+      width: '500px',
+      height: '430px'
+    });
+  }
+}
 
 
