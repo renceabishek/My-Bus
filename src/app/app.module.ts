@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { Login } from './login/login';
+import { SeatsComponent } from './seats/seats.component';
 
 
 
@@ -23,7 +24,8 @@ import { Login } from './login/login';
     HomeComponent,
     FooterComponent,
     SearchComponent,
-    Login
+    Login,
+    SeatsComponent
   ],
   imports: [
     BrowserModule,

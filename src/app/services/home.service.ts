@@ -11,6 +11,9 @@ export class HomeService {
   private routeId= new BehaviorSubject <string> (''); 
     castId=this.routeId.asObservable();
 
+    private seatId= new BehaviorSubject <any> (''); 
+    castSeatId=this.seatId.asObservable();
+
   getLocation(): Observable<any> {
     return this.http.get('./assets/mockdata/location.json');
   }
@@ -21,5 +24,9 @@ export class HomeService {
 
   fetchSearchLocation(from): Observable<any> {
     return this.http.get('./assets/mockdata/search.json');
+  }
+
+  getSeats(seats) {
+    this.seatId.next(seats);
   }
 }

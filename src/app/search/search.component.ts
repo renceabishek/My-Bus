@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HomeService } from '../services/home.service';
 import { Journey_Route } from '../models/journey.model';
 
@@ -13,7 +14,8 @@ export class SearchComponent implements OnInit {
   arrJourney: String[];
   buses:Journey_Route[]=[];
 
-  constructor(private home: HomeService) { }
+  constructor(private home: HomeService,
+    private router: Router) { }
 
   ngOnInit() {
     this.subscription= this.home.castId.subscribe(
@@ -39,6 +41,11 @@ export class SearchComponent implements OnInit {
       }
     )
 
+  }
+
+  onViewSeats() {
+    this.home.getSeats(this.buses);
+    this.router.navigate(['seats']);
   }
 
 }
