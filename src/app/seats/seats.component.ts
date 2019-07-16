@@ -9,19 +9,16 @@ import { Journey_Route } from '../models/journey.model';
   styleUrls: ['./seats.component.css']
 })
 export class SeatsComponent implements OnInit {
-  subscription:Subscription;
-  buses:Journey_Route[]=[];
+  
 
   constructor(private home: HomeService) { }
 
   ngOnInit() {
-    this.subscription= this.home.castSeatId.subscribe(
-      res=> {
-        this.buses = res.data;
-        //this.buses.forEach(f=>f.busname);
-        
-      }
-    )
+    
+  }
+
+  Seat(value){
+
   }
 
 }

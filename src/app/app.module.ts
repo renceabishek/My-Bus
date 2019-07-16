@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
 import { Login } from './login/login';
 import { SeatsComponent } from './seats/seats.component';
+import { SubmitComponent } from './submit/submit.component';
 
 
 
@@ -25,7 +26,8 @@ import { SeatsComponent } from './seats/seats.component';
     FooterComponent,
     SearchComponent,
     Login,
-    SeatsComponent
+    SeatsComponent,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,

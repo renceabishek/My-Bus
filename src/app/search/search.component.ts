@@ -43,8 +43,8 @@ export class SearchComponent implements OnInit {
 
   }
 
-  onViewSeats() {
-    this.home.getSeats(this.buses);
+  onViewSeats(selectedBus) {
+    this.home.getSeats(selectedBus);
     this.router.navigate(['seats']);
   }
 

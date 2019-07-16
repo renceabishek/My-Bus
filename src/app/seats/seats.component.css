@@ -1,0 +1,33 @@
+.seat_plan_wrap {
+    border: 3px solid coral;
+    padding: 40px;
+}
+
+.seats {
+    width: 201px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 41px auto;
+    /* height: 100%; */
+    padding-left: 34px;
+    padding-right: 10px;
+    float: left;
+}
+
+.handle {
+    float: left;
+    width: 100%;
+}
+.handle img {
+    float: right;
+}
+
+.row1  {
+    float: left;
+    width: 50%;
+}
+
+.row1 ul {
+    width: 40%;
+    float: left;
+}
