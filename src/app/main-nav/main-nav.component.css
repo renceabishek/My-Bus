@@ -23,3 +23,8 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.no-border {
+  outline: none;
+  border: 0px;
+}

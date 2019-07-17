@@ -1,34 +1,35 @@
 <mat-toolbar color="primary" style="position: fixed">
-  <mat-toolbar-row>
-
-    <h1>My Bus</h1>
-    <span class="menu-spacer"></span>
-
-
-    <a mat-button [routerLink]="'/'">
-      <span class="mat-button-wrapper">
-        <!-- <mat-icon src="../../assets/img/icon/home.svg" alt="Nature" style="width:50%;"></mat-icon> -->
-        <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
-        <span> Home </span>
-      </span>
-    </a>
-    <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
-
-    <a mat-button [routerLink]="'/create-account'"> Offers </a>
-    <a mat-button [routerLink]="'/contacts'"> Contacts </a>
-    <span class="example-spacer"></span>
-
-    <a mat-button [routerLink]="'/help'"> Help </a>
-    <button mat-button [matMenuTriggerFor]="menu" style="padding-bottom: 13px" aria-label="Example thumbs up SVG icon">
-      <mat-icon svgIcon="people"></mat-icon>
-    </button>
-    <mat-menu #menu="matMenu" [overlapTrigger]="false">
-      <button (click)="onLogin()" mat-menu-item>Sign In/ Sign Up</button>
-    </mat-menu>
-
-
-  </mat-toolbar-row>
-
-
-</mat-toolbar>
-<!-- Add Content Here -->
+    <mat-toolbar-row>
+  
+      <h1>My Bus</h1>
+      <span class="menu-spacer"></span>
+  
+  
+      <button mat-button [routerLink]="'/'" class="no-border">
+        <span class="mat-button-wrapper">
+          <!-- <mat-icon src="../../assets/img/icon/home.svg" alt="Nature" style="width:50%;"></mat-icon> -->
+          <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
+          <span> Home </span>
+        </span>
+      </button>
+      <!-- <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> -->
+  
+      <button mat-button [routerLink]="'/create-account'" class="no-border" > Offers </button>
+      <button mat-button [routerLink]="'/contacts'" class="no-border"> Contacts </button>
+      <span class="example-spacer"></span>
+  
+      <button mat-button [routerLink]="'/help'"> Help </button>
+      <button mat-button [matMenuTriggerFor]="menu" class="no-border" style="padding-bottom: 13px" 
+        aria-label="Example thumbs up SVG icon">
+        <mat-icon svgIcon="people"></mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="false" class="no-border" >
+        <button (click)="onLogin()" mat-menu-item class="no-border"> Sign In/ Sign Up</button>
+      </mat-menu>
+      
+  
+    </mat-toolbar-row>
+  
+  
+  </mat-toolbar>
+  <!-- Add Content Here -->
