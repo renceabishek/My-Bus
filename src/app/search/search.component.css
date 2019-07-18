@@ -2,3 +2,9 @@ table {
     border: 1px solid #dee2e6;
 }
 
+.divBorder {
+    margin: 5px; 
+    border: 1px solid blue; 
+    padding: 8px;
+    box-shadow: 2px 4px 8px 3px lightblue;
+}

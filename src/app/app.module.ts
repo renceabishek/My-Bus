@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { Login } from './login/login';
 import { SeatsComponent } from './seats/seats.component';
 import { SubmitComponent } from './submit/submit.component';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -27,10 +29,13 @@ import { SubmitComponent } from './submit/submit.component';
     SearchComponent,
     Login,
     SeatsComponent,
-    SubmitComponent
+    SubmitComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
     AppRoutingModule,
     LayoutModule,
     MatToolbarModule,
