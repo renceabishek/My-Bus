@@ -65,5 +65,8 @@ export class Login {
             this.util.openSnackBar('Enter valid data', 'Dismiss', 3000);
         }
     }
+    forgotPwd(){
+        
+    }
 }
 

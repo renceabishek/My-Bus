@@ -7,3 +7,8 @@
 .full-width {
     width: 100%;
 }
+.custom-link{
+    text-decoration: underline !important;
+    color: blue !important;
+    cursor:pointer;
+}

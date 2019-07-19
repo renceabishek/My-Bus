@@ -1,3 +1,8 @@
+<div style="float: right;">
+    <i style="margin-top: -20px;z-index: 1;position: fixed;" class="material-icons">
+        close
+    </i>
+</div>
 <div class="modal-content">
     <mat-tab-group [selectedIndex]="selectedIndex">
         <mat-tab label="Login">
@@ -26,8 +31,11 @@
             </form>
             <div class="">
                 <div class="text-center">
-                    <a href="" class="blue-text">Forgot password?</a><br>
-                    <p>Create a new account <a href="" class="blue-text">Sign up</a>
+                    <a (click)="forgotPwd()" class="custom-link">Forgot password</a><br>
+                    <p>Create a new account
+                        <a role="button" (click)="selectedIndex = 1;" class="custom-link">
+                            Sign up
+                        </a>
                     </p>
                 </div>
             </div>
@@ -60,13 +68,6 @@
                     </div>
                 </div>
             </form>
-            <div class="">
-                <div class="text-center">
-                    <p>Already had account
-                        <a href="" class="blue-text">Login</a>
-                    </p>
-                </div>
-            </div>
         </mat-tab>
     </mat-tab-group>
 </div>

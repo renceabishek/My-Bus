@@ -27,3 +27,6 @@ body {
         height: 100%;
         width: 100%
     }
+    div#mat-tab-label-0-0,div#mat-tab-label-0-1 {
+        width: 100% !important;
+    }
