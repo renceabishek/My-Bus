@@ -1,29 +1,72 @@
-<button type="button" (click)="dialogRef.close()" class="close no-border" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-</button>
-<div class="loginmodal-container">
-    <h1>SIGN IN / SIGN UP</h1><br>
-    <div *ngIf="type =='login'">
-        <form role="form">
-            <div class="form-group">
-                <input [(ngModel)]="mobileno" class="form-control" type="number" name="mobileno"
-                    placeholder="Mobile number">
+<div class="modal-content">
+    <mat-tab-group [selectedIndex]="selectedIndex">
+        <mat-tab label="Login">
+            <form role="form" [formGroup]="loginform" (ngSubmit)="doLogin(loginform.value, loginform.valid)">
+                <div class="modal-body mb-1">
+                    <div class="md-form form-sm">
+                        <mat-form-field class="full-width">
+                            <input matInput formControlName="email" placeholder="Enter email id" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="md-form form-sm">
+                        <mat-form-field class="full-width">
+                            <input matInput formControlName="password" placeholder="Enter password" autocomplete="off"
+                                [type]="hidePassword ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div class="text-center mt-2">
+                        <button mat-raised-button color="primary">Login</button>
+                    </div>
+                </div>
+            </form>
+            <div class="">
+                <div class="text-center">
+                    <a href="" class="blue-text">Forgot password?</a><br>
+                    <p>Create a new account <a href="" class="blue-text">Sign up</a>
+                    </p>
+                </div>
             </div>
-            <!-- <div style="text-align:center"> -->
-            <button type="button" (click)="generateOTP()" class="mat-raised-button mat-primary">Generate
-                OTP</button>
-            <!-- </div> -->
-        </form>
-    </div>
-    <div *ngIf="type == 'otp'">
-        <form role="form">
-            <div class="form-group">
-                <input [(ngModel)]="otpcode" class="form-control" type="string" name="otpcode" placeholder="OTP Code">
+        </mat-tab>
+        <mat-tab label="Sign up">
+            <form role="form" [formGroup]="regform" (ngSubmit)="registerUser(regform.value, regform.valid)">
+                <div class="modal-body mb-1">
+                    <div class="md-form form-sm">
+                        <mat-form-field class="full-width">
+                            <input matInput formControlName="phone" placeholder="Enter phone number" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="md-form form-sm">
+                        <mat-form-field class="full-width">
+                            <input matInput formControlName="email" placeholder="Enter email id" autocomplete="off">
+                        </mat-form-field>
+                    </div>
+                    <div class="md-form form-sm">
+                        <mat-form-field class="full-width">
+                            <input matInput formControlName="password" placeholder="Enter password" autocomplete="off"
+                                [type]="hidePassword ? 'password' : 'text'">
+                            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+                                [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div class="text-center mt-2">
+                        <button mat-raised-button color="primary">Sign up</button>
+                    </div>
+                </div>
+            </form>
+            <div class="">
+                <div class="text-center">
+                    <p>Already had account
+                        <a href="" class="blue-text">Login</a>
+                    </p>
+                </div>
             </div>
-            <button type="button" (click)="validateOTP()" class="mat-raised-button mat-primary">Validate OTP</button>
-        </form>
-    </div>
-    <div class="login-help">
-        By signing up, I agree to the <a href="#">Terms & Conditions</a>
-    </div>
+        </mat-tab>
+    </mat-tab-group>
 </div>
