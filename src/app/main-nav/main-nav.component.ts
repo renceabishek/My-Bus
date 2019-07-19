@@ -30,7 +30,7 @@ export class MainNavComponent {
   onLogin() {
     const dialogRef = this.dialog.open(Login, {
       width: '500px',
-      height: '375px',
+      height: '378px',
       disableClose: true
     });
   }

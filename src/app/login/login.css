@@ -12,3 +12,13 @@
     color: blue !important;
     cursor:pointer;
 }
+.no-border {
+  outline: none;
+  border: 0px;
+}
+.login-container-close{
+    margin-top: -20px;
+    z-index: 1;
+    position: fixed;
+    cursor: pointer;
+}

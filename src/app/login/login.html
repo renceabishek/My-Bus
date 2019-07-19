@@ -1,10 +1,10 @@
 <div style="float: right;">
-    <i style="margin-top: -20px;z-index: 1;position: fixed;" class="material-icons">
+    <i (click)="dialogRef.close()" class="material-icons login-container-close">
         close
     </i>
 </div>
 <div class="modal-content">
-    <mat-tab-group [selectedIndex]="selectedIndex">
+    <mat-tab-group [selectedIndex]="selectedIndex" mat-align-tabs="center">
         <mat-tab label="Login">
             <form role="form" [formGroup]="loginform" (ngSubmit)="doLogin(loginform.value, loginform.valid)">
                 <div class="modal-body mb-1">
@@ -69,5 +69,6 @@
                 </div>
             </form>
         </mat-tab>
+
     </mat-tab-group>
 </div>
