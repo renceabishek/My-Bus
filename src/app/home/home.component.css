@@ -26,4 +26,11 @@
     margin-left: 84px;
 
   }
+
+  .optionalAlign {
+    float: right;
+    margin-right: 385px;
+    margin-top: -15px;
+    color: red;
+  }
  

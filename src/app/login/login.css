@@ -7,3 +7,8 @@
 .full-width {
     width: 100%;
 }
+
+.no-border {
+  outline: none;
+  border: 0px;
+}

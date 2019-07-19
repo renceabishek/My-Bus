@@ -1,5 +1,10 @@
+
+<button type="button" (click)="dialogRef.close()" class="close no-border" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
 <div class="modal-content">
-    <mat-tab-group [selectedIndex]="selectedIndex">
+    <mat-tab-group [selectedIndex]="selectedIndex"
+    mat-align-tabs="center">
         <mat-tab label="Login">
             <form role="form" [formGroup]="loginform" (ngSubmit)="doLogin(loginform.value, loginform.valid)">
                 <div class="modal-body mb-1">
@@ -10,7 +15,7 @@
                     </div>
 
                     <div class="md-form form-sm">
-                        <mat-form-field class="full-width">
+                        <mat-form-field class="full-width" >
                             <input matInput formControlName="password" placeholder="Enter password" autocomplete="off"
                                 [type]="hidePassword ? 'password' : 'text'">
                             <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
@@ -36,17 +41,17 @@
             <form role="form" [formGroup]="regform" (ngSubmit)="registerUser(regform.value, regform.valid)">
                 <div class="modal-body mb-1">
                     <div class="md-form form-sm">
-                        <mat-form-field class="full-width">
+                        <mat-form-field class="full-width" >
                             <input matInput formControlName="phone" placeholder="Enter phone number" autocomplete="off">
                         </mat-form-field>
                     </div>
                     <div class="md-form form-sm">
-                        <mat-form-field class="full-width">
+                        <mat-form-field class="full-width" >
                             <input matInput formControlName="email" placeholder="Enter email id" autocomplete="off">
                         </mat-form-field>
                     </div>
                     <div class="md-form form-sm">
-                        <mat-form-field class="full-width">
+                        <mat-form-field class="full-width" >
                             <input matInput formControlName="password" placeholder="Enter password" autocomplete="off"
                                 [type]="hidePassword ? 'password' : 'text'">
                             <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
@@ -68,5 +73,6 @@
                 </div>
             </div>
         </mat-tab>
+        
     </mat-tab-group>
 </div>
