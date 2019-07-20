@@ -18,6 +18,7 @@ import { SeatsComponent } from './seats/seats.component';
 import { SubmitComponent } from './submit/submit.component';
 import { FilterComponent } from './filter/filter.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 
@@ -36,6 +37,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    NgxSpinnerModule,
     AngularFontAwesomeModule,
     FlexLayoutModule,
     AppRoutingModule,

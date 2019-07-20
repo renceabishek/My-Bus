@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { startWith, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { UtilService } from '../services/util.service';
+import { NgxSpinnerService } from "ngx-spinner";
 
 @Component({
   selector: 'home',
@@ -30,7 +31,8 @@ todaydate:Date = new Date();
     private home: HomeService,
     private route: ActivatedRoute,
     private router: Router,
-    private util: UtilService
+    private util: UtilService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit() {
@@ -55,6 +57,10 @@ todaydate:Date = new Date();
   }
 
   SearchBus() {
+    this.spinner.show();
+    setTimeout(() => {
+      
+    }, 5000);
     console.log(this.pickup.value)
     console.log(this.drop.value)
     let valid = this.validateForm();
@@ -63,7 +69,7 @@ todaydate:Date = new Date();
 
     this.home.getSearchLocation(this.pickup.value);
     this.router.navigate(['search']);
-
+    this.spinner.hide();
     
     //this.router.navigate([search', { pickup: this.pickup.value, drop: this.drop.value, date }]);
   }

@@ -1,4 +1,5 @@
 <br><br><br>
+
 <div class="pt-5 mb-5" style="color: #7e7e8c">
   <div class="row">
     <div class="col-md-2">
@@ -14,11 +15,11 @@
           <div fxFlex="10%">{{b.Droping}}</div>
           <div fxFlex="10%">{{b.coachType}}</div>
           <div fxFlex="10%">
-            <div class="star" *ngIf="b.ratings>3.5">
+            <div class="star" *ngIf="b.ratings>=4">
               <i class="fa fa-star" style="color:white"></i>
               <mat-label>{{b.ratings}}</mat-label>
             </div>
-            <div class="star3" *ngIf="b.ratings>=3 && b.ratings<=3.5">
+            <div class="star3" *ngIf="b.ratings>=3 && b.ratings<=4">
                 <i class="fa fa-star" style="color:white"></i>
                 <mat-label>{{b.ratings}}</mat-label>
               </div>
