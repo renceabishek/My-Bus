@@ -8,15 +8,28 @@
       <div *ngFor="let b of buses" class="divBorder">
         <div class="container" fxLayout fxLayout.xs="row" fxLayoutGap="1px" fxLayoutGap.xs="0">
 
-          <div fxFlex="20%" style="font-weight: bold; color:black" >{{b.busname}}</div>
+          <div fxFlex="20%" style="font-weight: bold; color:black">{{b.busname}}</div>
           <div fxFlex="10%" style="font-weight: bold; font-size:22px; color:black">{{b.boarding}}</div>
           <div fxFlex="10%">{{b.travelingTime}}</div>
           <div fxFlex="10%">{{b.Droping}}</div>
           <div fxFlex="10%">{{b.coachType}}</div>
-          <div fxFlex="10%">{{b.ratings}}</div>
+          <div fxFlex="10%">
+            <div class="star" *ngIf="b.ratings>3.5">
+              <i class="fa fa-star" style="color:white"></i>
+              <mat-label>{{b.ratings}}</mat-label>
+            </div>
+            <div class="star3" *ngIf="b.ratings>=3 && b.ratings<=3.5">
+                <i class="fa fa-star" style="color:white"></i>
+                <mat-label>{{b.ratings}}</mat-label>
+              </div>
+              <div class="star2" *ngIf="b.ratings<3">
+                  <i class="fa fa-star" style="color:white"></i>
+                  <mat-label>{{b.ratings}}</mat-label>
+                </div>
+          </div>
           <div fxFlex="10%">INR{{b.Fare}}</div>
 
-          
+
 
         </div>
         <div class="container" fxLayout fxLayout.xs="row" fxLayoutGap="1px" fxLayoutGap.xs="0">

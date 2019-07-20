@@ -23,6 +23,9 @@ export class HomeComponent implements OnInit {
   fromLoc: Observable<string[]>;
   toLoc: Observable<string[]>;
 
+  //today's date
+todaydate:Date = new Date();
+
   constructor(
     private home: HomeService,
     private route: ActivatedRoute,

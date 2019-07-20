@@ -30,14 +30,14 @@
 
             <mat-form-field class="full-width">
                 <input matInput [matDatepicker]="date" [(ngModel)]="startdate" name="startdate"
-                    placeholder="Onward date">
+                    placeholder="Onward date" [min]="todaydate" >
                 <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
                 <mat-datepicker #date></mat-datepicker>
             </mat-form-field>
 
             <mat-form-field class="full-width">
                 <input matInput [matDatepicker]="date1" [(ngModel)]="returndate" name="returndate"
-                    placeholder="Return date">
+                    placeholder="Return date" [min]="todaydate" >
                 <mat-datepicker-toggle matSuffix [for]="date1"></mat-datepicker-toggle>
                 <mat-datepicker #date1></mat-datepicker>
                 

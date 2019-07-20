@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
 import { Router, ActivatedRoute } from '@angular/router';
 import { HomeService } from '../services/home.service';
@@ -14,8 +16,12 @@ export class SearchComponent implements OnInit {
   arrJourney: String[];
   buses:Journey_Route[]=[];
 
-  constructor(private home: HomeService,
-    private router: Router) { }
+  constructor(private home: HomeService, iconRegistry: MatIconRegistry,
+    private router: Router, sanitizer: DomSanitizer) {
+      iconRegistry.addSvgIcon(
+        'star',
+        sanitizer.bypassSecurityTrustResourceUrl('../../assets/img/icon/star.svg'));
+     }
 
   ngOnInit() {
     this.subscription= this.home.castId.subscribe(

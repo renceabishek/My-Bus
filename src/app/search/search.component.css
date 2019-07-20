@@ -8,3 +8,43 @@ table {
     padding: 8px;
     box-shadow: 2px 4px 8px 3px lightblue;
 }
+
+tr:hover {
+    background-color: #ffff99;
+  }
+
+  .star {
+    background-color: #38b87c;
+    padding: 4px 3px;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+    width: 40px;
+    text-align: center;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .star3 {
+    background-color: #f7e707;
+    padding: 4px 3px;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+    width: 40px;
+    text-align: center;
+    height: 24px;
+    font-size: 12px;
+  }
+
+  .star2 {
+    background-color: red;
+    padding: 4px 3px;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+    width: 40px;
+    text-align: center;
+    height: 24px;
+    font-size: 12px;
+  }

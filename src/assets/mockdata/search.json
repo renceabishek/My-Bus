@@ -45,7 +45,7 @@
             "SeatAvailable": "49",
             "Fare": "500",
             "travelingTime": "5:00",
-            "ratings": "3.5",
+            "ratings": "3.2",
             "seatType": "Semi Sleeper"
         },
         {
@@ -61,7 +61,7 @@
             "SeatAvailable": "30",
             "Fare": "100",
             "travelingTime": "5:00",
-            "ratings": "4.0",
+            "ratings": "2.0",
             "seatType": "Sleeper"
         },
         {

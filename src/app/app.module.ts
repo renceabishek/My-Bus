@@ -17,6 +17,7 @@ import { Login } from './login/login';
 import { SeatsComponent } from './seats/seats.component';
 import { SubmitComponent } from './submit/submit.component';
 import { FilterComponent } from './filter/filter.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 
@@ -35,6 +36,7 @@ import { FilterComponent } from './filter/filter.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AngularFontAwesomeModule,
     FlexLayoutModule,
     AppRoutingModule,
     LayoutModule,
