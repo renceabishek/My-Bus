@@ -7,6 +7,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule, MatTabsModule, MatAutocompleteModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MAT_DATE_LOCALE, MatSnackBarModule, MatDialogModule } from '@angular/material';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -53,6 +54,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatNativeDateModule,
     MatInputModule,
     MatCardModule,
+    MatCheckboxModule,
     MatSnackBarModule,
     MatDialogModule,
     BrowserAnimationsModule,

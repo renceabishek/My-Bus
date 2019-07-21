@@ -9,6 +9,10 @@
     margin-left:10px;
   }
 
+  .search {
+    font-family: "Montserrat";
+}
+
   .image_Backgroup {
     background: url(../../assets/img/Coach-Canada-Bus-Services_1920.jpg)  no-repeat center;
     background-position: 0px 16px;

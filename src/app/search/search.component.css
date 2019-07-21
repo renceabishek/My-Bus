@@ -2,6 +2,10 @@ table {
     border: 1px solid #dee2e6;
 }
 
+.filter {
+    font-family: "Montserrat";
+}
+
 .divBorder {
     margin: 5px; 
     border: 1px solid #ddd; 
