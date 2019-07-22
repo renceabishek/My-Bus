@@ -5,9 +5,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   providedIn: 'root'
 })
 export class UtilService {
-
+  loader: boolean = false;
   constructor(private _snackBar: MatSnackBar) { }
   openSnackBar(message: string, action: string, duration: number) {
     this._snackBar.open(message, action, { duration });
+  }
+  showLoader() {
+    this.loader = true;
+  }
+  hideLoader() {
+    this.loader = false;
   }
 }
