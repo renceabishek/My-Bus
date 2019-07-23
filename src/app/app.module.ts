@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatTabsModule, MatAutocompleteModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MAT_DATE_LOCALE, MatSnackBarModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatToolbarModule, MatTabsModule, MatAutocompleteModule,MatRadioModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, MatInputModule, MatCardModule, MAT_DATE_LOCALE, MatSnackBarModule, MatDialogModule, MatProgressSpinnerModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatMenuModule } from '@angular/material/menu';
 import { HomeComponent } from './home/home.component';
@@ -20,6 +20,7 @@ import { SubmitComponent } from './submit/submit.component';
 import { FilterComponent } from './filter/filter.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { NgxSpinnerModule } from "ngx-spinner";
+
 
 
 
@@ -57,6 +58,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
     MatCheckboxModule,
     MatSnackBarModule,
     MatDialogModule,
+    MatRadioModule,
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,

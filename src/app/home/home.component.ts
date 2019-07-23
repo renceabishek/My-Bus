@@ -57,10 +57,7 @@ todaydate:Date = new Date();
   }
 
   SearchBus() {
-    this.spinner.show();
-    setTimeout(() => {
-      
-    }, 5000);
+    this.util.showLoader();
     console.log(this.pickup.value)
     console.log(this.drop.value)
     let valid = this.validateForm();
@@ -68,8 +65,8 @@ todaydate:Date = new Date();
     let date = this.formatDate(this.startdate);
 
     this.home.getSearchLocation(this.pickup.value);
+    this.util.hideLoader();
     this.router.navigate(['search']);
-    this.spinner.hide();
     
     //this.router.navigate([search', { pickup: this.pickup.value, drop: this.drop.value, date }]);
   }

@@ -1,10 +1,35 @@
-<table>
-<tr>
-<td>{{buses.busname}}</td>
-<td>{{buses.boarding}}</td>
-<td>{{buses.Droping}}</td>
-<td>{{buses.fromPlace}}</td>
-<td>{{buses.toPlace}}</td>
-
-</tr>
-</table>
+<div class="modal-content" style="width: 88%; height:80%">
+        <mat-tab-group [selectedIndex]="selectedIndex" *ngIf="hide" mat-align-tabs="center">
+            <mat-tab label="Boarding Point">
+                <form role="form" [formGroup]="boardingform" 
+                (ngSubmit)="doBoardingForm(boardingform.value, boardingform.valid)">
+                    <div class="modal-body mb-1" >
+                        <div class="md-form form-sm">
+                                <mat-radio-group aria-label="Select Borading Point"
+                                *ngFor="let board of boardingList">
+                                        <mat-radio-button value="1"
+                                        >{{board}}</mat-radio-button> <br>
+                                </mat-radio-group>
+                        </div>
+                    </div>
+                </form>
+            </mat-tab>
+            <mat-tab label="Dropping Point">
+                <form role="form" [formGroup]="droppingForm" (ngSubmit)="doDroppingForm(droppingForm.value, droppingForm.valid)">
+                    <div class="modal-body mb-1">
+                        <div class="md-form form-sm">
+                                <mat-radio-group aria-label="Select Droping Point"
+                                *ngFor="let drop of droppingList">
+                                        <mat-radio-button  value="1"
+                                        >{{drop}}</mat-radio-button> <br>
+                                </mat-radio-group>
+                        </div>
+                        <div class="text-center mt-2">
+                            <button mat-raised-button color="primary" (click)="doContinue()">Continue</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-tab>
+    
+        </mat-tab-group>
+    </div>
