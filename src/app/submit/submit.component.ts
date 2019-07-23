@@ -54,6 +54,10 @@ export class SubmitComponent implements OnInit {
     this.hide=false;
   }
 
+  doBack() {
+    this.hide=true;
+  }
+
   doDroppingForm(value,valid) {
 
   }
